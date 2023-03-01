@@ -33,8 +33,6 @@ body {
     height: 100%;
     background-image: url(../img/sidebar-bg.png);
     background-color:#051E34;
-    /* debug */
-    color: white;
 }
 .ms_main_part {
     width:calc(100% - 50px);
@@ -44,18 +42,21 @@ body {
 .ms_banner {
     background-color:#1B72E8;
 }
+.ms_table_img {
+    width: 40px;
+}
 
 /* RESPONSIVE */
 @media screen and (min-width:992px) {
     /* Layout */
     .ms_sidebar {
-        width: 200px;
+        width: 150px;
     }
     .ms_main_part {
-        width: calc(100% - 200px);
+        width: calc(100% - 150px);
     }
     /* Styles */
     .ms_logo_img {
-    width: 150px;
+    width: 140px;
 }  
 }
