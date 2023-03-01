@@ -1,0 +1,14 @@
+/* RESET */
+img {
+    max-width: 100%;
+}
+
+/* STYLE */
+
+/* Layout */
+.ms_wrapper {
+    width: 100%;
+    height: 100vh;
+    /* debug */
+    background-color: aqua;
+}
