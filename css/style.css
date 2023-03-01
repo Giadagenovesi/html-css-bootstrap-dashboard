@@ -7,25 +7,26 @@ img {
 body {
     font-family: 'Roboto', sans-serif;
 }
+.ms_icon {
+    color: orange;
+}
+.ms_logo_img {
+    width: 50px;
+}
 
 /* Layout */
 .ms_wrapper {
     width: 100%;
     height: 100vh;
-    /* debug */
-    background-color: aqua;
 }
 .ms_header {
     width: 100%;
-    height: 80px;
-      /* debug */
-    background-color:rgb(193, 185, 185);  
+    height: 70px;
+    background-color:#F8F9FA;  
 }
 .ms_main {
     width: 100%;
-    height: calc(100% - 80px);
-      /* debug */
-    background-color: rgb(211, 155, 155);
+    height: calc(100% - 70px);
 }
 .ms_sidebar {
     width: 50px;
@@ -39,22 +40,22 @@ body {
     width:calc(100% - 50px);
     height: 100%;
     overflow-y: auto;
-      /* debug */
-    background-color: rgb(155, 178, 211);
 }
 .ms_banner {
-    height: 150px;
-    width: 100%;
     background-color:#1B72E8;
 }
 
 /* RESPONSIVE */
 @media screen and (min-width:992px) {
+    /* Layout */
     .ms_sidebar {
         width: 200px;
     }
     .ms_main_part {
         width: calc(100% - 200px);
     }
-    
+    /* Styles */
+    .ms_logo_img {
+    width: 150px;
+}  
 }
