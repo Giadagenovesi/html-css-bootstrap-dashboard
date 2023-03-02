@@ -86,25 +86,33 @@
         <!-- MAIN -->
         <main class="ms_main d-flex ">
             <!-- Sidebar -->
-            <div class="ms_sidebar d-flex text-white">
-                <nav class="ms_nav-left d-flex flex-column justify-content-between">
-                    <ul class="ps-3 mt-4">
-                        <li class="d-flex mb-3 align-items-baseline">
-                            <i class="fa-solid fa-house"></i>
-                            <span class="ms_text-sidebar d-none d-lg-block ms-3">Home</span>
+            <div class="ms_sidebar d-flex ">
+                <nav class="d-flex flex-column justify-content-between">
+                    <ul class="ps-1 mt-4">
+                        <li class="d-flex ps-1 align-items-baseline">
+                            <a class="text-decoration-none text-white p-2" href="">
+                                <i class="fa-solid fa-house ms-1"></i>
+                            <span class="ms_text-sidebar d-none d-lg-inline-block ms-3">Home</span>
+                            </a>
                         </li>
-                        <li class="d-flex mb-3 align-items-baseline">
-                            <i class="fa-solid fa-chart-simple"></i>
-                            <span class="ms_text-sidebar d-none d-lg-block ms-3">Stats</span>
+                        <li class="d-flex ps-1 align-items-baseline">
+                            <a class="text-decoration-none text-white p-2" href="">
+                                <i class="fa-solid fa-chart-simple ms-1"></i>
+                                <span class="ms_text-sidebar d-none d-lg-inline-block ms-3">Stats</span>
+                            </a>
                         </li>
-                        <li class="d-flex mb-3 align-items-baseline">
-                            <i class="fa-solid fa-signal"></i>
-                            <span class="ms_text-sidebar d-none d-lg-block ms-3">Signals</span>
+                        <li class="d-flex ps-1 align-items-baseline">
+                            <a class="text-decoration-none text-white p-2" href="">
+                                <i class="fa-solid fa-signal ms-1"></i>
+                                <span class="ms_text-sidebar d-none d-lg-inline-block ms-3">Signals</span>
+                            </a>
                         </li>
                     </ul>
-                    <div class="ms_entity ps-3 mb-4 d-flex justify-content-center align-items-baseline">
-                        <i class="fa-solid fa-gear"></i>
-                        <span class="ms_text-sidebar d-none d-lg-block ms-3">Admin</span>
+                    <div class="ms_entity p-2 ps-1 mb-4 d-flex justify-content-center align-items-baseline">
+                        <a class="text-decoration-none text-white p-2" href="">
+                            <i class="fa-solid fa-gear ms-1"></i>
+                            <span class="ms_text-sidebar d-none d-lg-inline-block ms-3">Admin</span>
+                        </a> 
                     </div>
                 </nav>
             </div>
@@ -119,35 +127,117 @@
                             <div class="col-12 col-md-4 col-lg-2 order-md-1">
                                <div> 
                                     <p class="d-inline-block">Nuovo studente</p> 
-                                    <button type="button" class="btn btn-outline-light d-inline-block ms-3">
+                                    <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="btn btn-outline-light d-inline-block ms-3">
                                     <i class="fa-solid fa-plus"></i>
                                     </button>
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                                        <div class="offcanvas-header">
+                                            <h5 class="offcanvas-title" id="offcanvasRightLabel">
+                                                Inserisci un nuovo studente
+                                            </h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <form class="row g-3">
+                                                <div class="col-12 col-md-6">
+                                                    <label for="inputName" class="form-label">Nome</label>
+                                                    <input type="text" class="form-control" 
+                                                    id="inputName" aria-label="First name">
+                                                </div>
+                                                <div class="col-12 col-md-6">
+                                                    <label for="inputLastname" class="form-label">Cognome</label>
+                                                    <input type="text" class="form-control" 
+                                                    id="inputLastname" aria-label="Last name">
+                                                </div>
+                                                <div class="col-12 col-md-6">
+                                                    <label for="inputEmail4" class="form-label">Email</label>
+                                                    <input type="email" class="form-control" id="inputEmail4">
+                                                </div>
+                                                <div class="col-12 col-md-6">
+                                                    <label for="inputPassword4" class="form-label">Password</label>
+                                                    <input type="password" class="form-control" id="inputPassword4">
+                                                </div>
+                                                <div class="col-12 col-md-6">
+                                                    <label for="inputEmail5" class="form-label">Email</label>
+                                                    <input type="email" class="form-control" id="inputEmail5">
+                                                </div>
+                                                <div class="col-12 col-md-6">
+                                                    <label for="inputPassword5" class="form-label">Password</label>
+                                                    <input type="password" class="form-control" id="inputPassword5">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label for="inputAddress" class="form-label">Indirizzo</label>
+                                                    <input type="text" class="form-control" id="inputAddress">
+                                                </div>
+                                                <div class="col-12 col-md-6">
+                                                    <label for="inputCity" class="form-label">Città</label>
+                                                    <input type="text" class="form-control" id="inputCity">
+                                                </div>
+                                                <div class="col-12 col-md-4">
+                                                    <label for="inputState" class="form-label">Stato</label>
+                                                    <select id="inputState" class="form-select">
+                                                    <option selected>Scegli...</option>
+                                                    <option>...</option>
+                                                  </select>
+                                                </div>
+                                                <div class="col-12 col-md-2">
+                                                    <label for="inputZip" class="form-label">CAP</label>
+                                                    <input type="text" class="form-control" id="inputZip">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="formFile" class="form-label">Foto</label>
+                                                    <input class="form-control" type="file" id="formFile">
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                      Seleziona per proseguire
+                                                    </label>
+                                                </div>
+                                                <div class="col-12">
+                                                    <button type="submit" class="btn btn-primary">Salva</button>
+                                                    <button type="submit" class="btn btn-warning">Svuota</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
                                </div> 
                             </div>
                             <div class="col-12 col-md-4 col-lg-6">
                                 <div>
                                     <h3 class="d-inline-block"> Boolean</h3>
-                                    <span class="badge rounded-pill text-bg-dark bg-opacity-25 ms-2"> Piano blaze</span>
-
+                                    <a href="">
+                                        <span class="badge rounded-pill text-bg-dark bg-opacity-25 ms-2"> Piano blaze</span>
+                                    </a>
                                 </div>
                                 <ul class="list-unstyled d-flex flex-wrap">
                                     <li class="me-1">
-                                        <span class="badge rounded-pill text-bg-dark bg-opacity-25">3 app</span>
+                                        <a href="">
+                                            <span class="badge rounded-pill text-bg-dark bg-opacity-25">3 app</span>
+                                        </a>
                                     </li>
                                     <li class="me-1">
                                         <i class="fa-solid fa-angles-right"></i>
                                     </li>
                                     <li class="me-1">
-                                        <span class="badge rounded-pill text-bg-dark bg-opacity-25 d-lg-none"> + </span>
+                                        <a href="">
+                                            <span class="badge rounded-pill text-bg-dark bg-opacity-25 d-lg-none"> + </span>
+                                        </a>
                                     </li>
                                     <li class="me-1">
-                                        <span class="badge rounded-pill text-bg-dark bg-opacity-25 d-none d-lg-inline-block">Boolean mobile app</span>
+                                        <a href="">
+                                            <span class="badge rounded-pill text-bg-dark bg-opacity-25 d-none d-lg-inline-block">Boolean mobile app</span>
+                                        </a>
                                     </li>
                                     <li class="me-1">
-                                        <span class="badge rounded-pill text-bg-dark bg-opacity-25 d-none d-lg-inline-block">Boolean web app</span>
+                                        <a href="">
+                                            <span class="badge rounded-pill text-bg-dark bg-opacity-25 d-none d-lg-inline-block">Boolean web app</span>
+                                        </a>
                                     </li>
                                     <li>
-                                        <span class="badge rounded-pill text-bg-dark bg-opacity-25 d-none d-lg-inline-block">Boolean blog app</span>
+                                        <a href="">
+                                            <span class="badge rounded-pill text-bg-dark bg-opacity-25 d-none d-lg-inline-block">Boolean blog app</span>
+                                        </a> 
                                     </li>
                                 </ul>
                             </div>

@@ -46,6 +46,12 @@ body {
     width: 40px;
 }
 
+/* HOVER EFFECTS */
+.ms_sidebar a:hover {
+    background-color: rgba(255, 255, 255,.5);
+}
+
+
 /* RESPONSIVE */
 @media screen and (min-width:992px) {
     /* Layout */
