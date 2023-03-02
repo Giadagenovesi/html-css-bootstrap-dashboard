@@ -3,10 +3,11 @@ img {
     max-width: 100%;
 }
 
-/* STYLE */
+/* TYPOGRAPHY */
 body {
     font-family: 'Roboto', sans-serif;
 }
+/* STYLE */
 .ms_icon {
     color: orange;
 }
@@ -37,7 +38,6 @@ body {
 .ms_main_part {
     width:calc(100% - 50px);
     height: 100%;
-    overflow-y: auto;
 }
 .ms_banner {
     background-color:#1B72E8;
